@@ -1,5 +1,5 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from 'fs/promises';
+import path from 'path';
 
 const generateProxyFileContent = (devServerPort: number) => `
 <script>
@@ -29,19 +29,12 @@ const generateProxyFileContent = (devServerPort: number) => `
 </script>
 `
 
-export function createProxyFile(devServerPort: number) {
+export async function createProxyFile(devServerPort: number) {
     const content = generateProxyFileContent(devServerPort);
 
-    const filePath = path.resolve(__dirname, '../proxy/index.html');
+    const fileDir = path.resolve(__dirname, '..', 'proxy');
+	const filePath = path.resolve(fileDir, 'index.html');
 
-    return new Promise<void>((resolve, reject) => {
-        fs.writeFile(filePath, content, (err) => {
-            if (err) {
-                reject(err);
-                return;
-            }
-
-            resolve();
-        })
-    });
+	await fs.mkdir(fileDir, { recursive: true });
+	await fs.writeFile(filePath, content);
 }

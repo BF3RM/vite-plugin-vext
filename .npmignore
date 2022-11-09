@@ -1,3 +1,6 @@
 tsconfig.json
 src
+example
+proxy
 vuicc.exe
+ui.vuic

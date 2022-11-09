@@ -15,5 +15,5 @@ node_modules/
 dist
 
 # Example builds
-proxy/index.html
+proxy
 ui.vuic
