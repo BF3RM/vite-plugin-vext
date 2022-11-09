@@ -1,15 +1,15 @@
 # Vite Plugin VEXT
-A Vite plugin to automatically build a vuic file for Venice Unleashed
+A plugin to automatically build your vuic file for Venice Unleashed
 
 ## Installation
 With npm
 ```
-npm install --save-dev vextpack
+npm install --save-dev vite-plugin-vext
 ```
 
 With yarn
 ```
-yarn -D vextpack
+yarn -D vite-plugin-vext
 ```
 
 ## Usage
