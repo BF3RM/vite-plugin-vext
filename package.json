@@ -1,0 +1,32 @@
+{
+  "name": "vite-plugin-vext",
+  "version": "0.1.0",
+  "description": "A Vite plugin to automatically build a vuic file for Venice Unleashed",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "postinstall": "node install.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BF3RM/vite-plugin-vext.git"
+  },
+  "keywords": [
+    "venice-unleashed",
+    "vext",
+    "vite",
+    "vuic"
+  ],
+  "author": "Paul Hobbel <contact@paulhobbel.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BF3RM/vite-plugin-vext/issues"
+  },
+  "homepage": "https://github.com/BF3RM/vite-plugin-vext#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.3"
+  }
+}
